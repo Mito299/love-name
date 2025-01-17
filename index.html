@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sdl/index.css">
+    <title>เลือกภาษา / ເລືອກພາສາ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container" id="languagePage">
+        <h1>เลือกภาษา / ເລືອກພາສາ</h1>
+        <button class="language-button" onclick="selectLanguage('th')">ไทย</button>
+        <button class="language-button" onclick="selectLanguage('lo')">ລາວ</button>
+    </div>
+
+
+    <div class="container" id="mainPage" style="display: none;">
+        <h1 id="title">สุ่มคำบอกรัก</h1>
+        <input type="text" id="nameInput" placeholder="ใส่ชื่อคนที่คุณรัก">
+        <button onclick="generateMessage()" id="generateButton">สุ่มคำบอกรัก</button>
+    </div>
+
+
+    <div class="popup" id="popup">
+        <h2 id="popupTitle">คำบอกรัก</h2>
+        <p id="popupMessage"></p>
+        <button onclick="closePopup()" id="closeButton">ปิด</button>
+    </div>
+
+
+    <div class="overlay" id="overlay"></div>
+</body>
+<script src="./sdl/index.js"></script>
+
+</html>
